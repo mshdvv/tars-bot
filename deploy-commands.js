@@ -9,17 +9,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const commands = [];
-const foldersPath = path.join(__dirname, "comandos");
+const foldersPath = join(__dirname, "comandos");
 const commandFolders = fs.readdirSync(foldersPath);
 
 for (const folder of commandFolders) {
-  const commandsPath = path.join(foldersPath, folder);
+  const commandsPath = join(foldersPath, folder);
   const commandFiles = fs
     .readdirSync(commandsPath)
     .filter((file) => file.endsWith(".js"));
   for (const file of commandFiles) {
     console.log(`Cargando ${file} en guilds.`);
-    const filePath = path.join(commandsPath, file);
+    const filePath = join(commandsPath, file);
     const { default: command } = await import(filePath);
     if ("data" in command && "execute" in command) {
       commands.push(command.data.toJSON());
