@@ -18,6 +18,7 @@ export default {
         ],
         status: "online",
       });
+      console.log(`Update:\nServers:${serverCount}\nUsers:${userCount}`);
     };
 
     showGuildUsersCount();
