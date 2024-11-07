@@ -1,5 +1,4 @@
 import fs from "node:fs";
-// import path from "node:path";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import connectDB from "./modules/mongo/db.js";

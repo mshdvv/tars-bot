@@ -6,9 +6,9 @@ export default {
   execute(client) {
     //Mostrar los servidores y usuarios totales como una actividad Watching
     const guilds = client.guilds;
-    const serverCount = guilds.cache.size;
-    const userCount = guilds.cache.reduce((a, g) => a + g.memberCount, 0);
     const showGuildUsersCount = () => {
+      const serverCount = guilds.cache.size;
+      const userCount = guilds.cache.reduce((a, g) => a + g.memberCount, 0);
       client.user.setPresence({
         activities: [
           {
