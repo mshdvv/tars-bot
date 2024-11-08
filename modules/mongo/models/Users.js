@@ -29,6 +29,7 @@ const userSchema = new mongoose.Schema({
   tokenUsageHistory: {
     completions: { type: Array, default: [] },
     images: { type: Array, default: [] },
+    imageAnalize: { type: Array, default: [] },
     audios: { type: Array, default: [] },
   },
   lastUse: { type: Date },

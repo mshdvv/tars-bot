@@ -32,15 +32,10 @@ async function textVision(
     return isThread ? threadModel : userModel;
   }
 
-  // Limitacion para envio de imagenes en hilos
-  // if (isThread) {
-  //   return "> Free users cannot send images to gpt-4o in threads.";
-  // }
-
   const instance = await getInstance(isThread, id, name);
   const data = await getData(isThread, id, name);
   const model = getModel(isThread);
-  const backupHistory = [...instance.dynamicHistory];
+  // const backupHistory = [...instance.dynamicHistory];
 
   // TODO: Agregar paquete mime-types para dejar de usar esta porqueria ._.
 
