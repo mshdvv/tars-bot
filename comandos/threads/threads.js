@@ -32,13 +32,13 @@ export default {
     const threadName =
       interaction.options.getString("nombre") || `${userName} | ${threadModel}`;
 
-    if (threadModel == "gpt-4o") {
-      await interaction.reply({
-        content: `Esta opcion solo esta disponible para usuarios premium.`,
-        ephemeral: true,
-      });
-      return;
-    }
+    // if (threadModel == "gpt-4o") {
+    //   await interaction.reply({
+    //     content: `Esta opcion solo esta disponible para usuarios premium.`,
+    //     ephemeral: true,
+    //   });
+    //   return;
+    // }
 
     try {
       const replyMessage = await interaction.reply({
